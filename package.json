@@ -1,0 +1,24 @@
+{
+  "name": "atividade-mvc",
+  "version": "1.0.0",
+  "description": "Projeto templete em JSON, Node.js e XML",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SENAI",
+    "dev",
+    "back-end",
+    "JSON",
+    "Node.js"
+  ],
+  "author": "Isabella Borin",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "uuid": "^11.0.5"
+  }
+}
