@@ -16,9 +16,16 @@ const router = {
             if (!title || !director || !gender || !duration) {
                 throw new Error ("Preencha todos os campos!");
             }
-            const film = new Movie (title, director, gender, duration, plays)
+            const film = new Movie (title, director, gender, duration, plays);
+            list.addMovie(film);
+            res.status(200).json({ message: "Filme criado com sucesso", film });
         } catch (error) {
+            res.status(400).json({
+                message: "Erro ao criar música",
+                error: error.message,
+            });
 
-            
         }
+    },
+
 }
