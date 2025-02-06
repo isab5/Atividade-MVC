@@ -36,3 +36,14 @@
 
 ### GET by ID:
 <img src="./img/getMovieById.png" alt="">
+
+## 🖥 XML:
+
+<!-->
+<?xml version="1.0" encoding="UTF-8"?>
+<dados>
+<nome>Homem de ferro</nome>
+<director>Jon Favreau</director>
+<gender>Ação</gender>
+<duration>2h 6m</duration>
+</dados>
