@@ -3,7 +3,7 @@ class MovieList {
         this.movies = [];
     }
     addMovie(movie) {
-        this.movie.push(movie);
+        this.movies.push(movie);
     }
     getAllMovies() {
         return this.movies;
