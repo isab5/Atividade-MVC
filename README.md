@@ -16,6 +16,23 @@
 
 ## 📊 UML (Linguagem de modelagem unificada) da Atividade
 
-#### URL do diagrama: https://drive.google.com/file/d/1k7CPCfJzl3uidy6FSz5V4Pby-g5_xXjf/view?usp=sharing
+#### Diagrama UML: 
+
+<img src="./img/Diagrama UML.png" alt="">
 
 ## 👩‍🚀 Postman 
+
+### GET:
+<img src="./img/getAllMovies.png" alt="">
+
+### POST:
+<img src="./img/addMovie.png" alt="">
+
+### PUT:
+<img src="./img/updateMovie.png" alt="">
+
+### DELETE:
+<img src="./img/deleteMovie.png" alt="">
+
+### GET by ID:
+<img src="./img/getMovieById.png" alt="">
