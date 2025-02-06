@@ -4,7 +4,8 @@
   "description": "Projeto templete em JSON, Node.js e XML",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "CLS && nodemon server.js"
   },
   "keywords": [
     "SENAI",
