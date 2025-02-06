@@ -30,7 +30,7 @@ const router = {
 
     getAllMovies: (req, res) => {
         try {
-            const songs = list.getAllMovies();
+            const movies = list.getAllMovies();
             res.status(200).json(movies);
         } catch (error) {
             res.status(404).json({
