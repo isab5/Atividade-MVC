@@ -3,27 +3,26 @@ const MovieList = require("../models/MovieList");
 
 const list = new MovieList();
 
-const movie1 = new Movie("Homem de ferro", "Jon Favreau", "ação", "2h 6m", 10);
+const movie1 = new Movie("Homem de ferro", "Jon Favreau", "ação", "2h 6m");
 
 list.addMovie(movie1);
 
-list.addMovie(new Movie("Coraline e o Mundo Secreto", "Henry Selick", "terror", "1h 40m", 7));
+list.addMovie(new Movie("Coraline e o Mundo Secreto", "Henry Selick", "terror", "1h 40m"));
 
 const router = {
     addMovie: (req, res) => {
         try {
-            const { title, director, gender, duration, plays } = req.body;
+            const { title, director, gender, duration } = req.body;
             if (!title || !director || !gender || !duration) {
                 throw new Error ("Preencha todos os campos!");
             }
-            const film = new Movie (title, director, gender, duration, plays);
+            const film = new Movie (title, director, gender, duration);
             list.addMovie(film);
             res.status(200).json({ message: "Filme criado com sucesso", film });
         } catch (error) {
             res.status(400).json({
                 message: "Erro ao criar música",
-                error: error.message,
-            });
+                error});
 
         }
     },
@@ -35,8 +34,7 @@ const router = {
         } catch (error) {
             res.status(404).json({
                 message: "Erro ao buscar filmes",
-                error: error.message,
-            });
+                error});
         }
     },
 
@@ -47,8 +45,7 @@ const router = {
         } catch (error) {
             res.status(404).json({
                 message: "Erro ao buscar filme por id!",
-                error: error.message,
-            });
+                error});
         }
     },
     updateMovie: (req, res) => {
@@ -57,8 +54,7 @@ const router = {
         } catch (error) {
             res.status(404).json({
                 message: "Erro ao atualizar filme!",
-                error: error.message,
-            });
+                error});
         }
     },
     deleteMovie: (req, res) => {
@@ -67,15 +63,7 @@ const router = {
             list.deleteMovie(film);
             res.status(200).json({ message: "Filme deletado com sucesso!", film});
         } catch (error) {
-            res.status(404).json({ message: "erro ao deletar filmes!", error: error.message})
-        }
-    },
-    getTop10Movies: (req, res) => {
-        try {
-            const film = list.getTop10Movies();
-            res.status(200).json(film)
-        } catch (error) {
-            res.status(404).json ({ message: "Erro ao buscar Top10!", error: error.message});
+            res.status(404).json({ message: "erro ao deletar filmes!", error})
         }
     }
 };

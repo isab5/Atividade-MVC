@@ -9,7 +9,7 @@ class MovieList {
         return this.movies;
     }
     getMovieById(id) {
-        const movie = this.movies.find((movie) => movie.id == id);
+        const movie = this.movies.find(movie => movie.id == id);
         if (!movie) {
             throw new Error("Filme não encontrado!");
         }
@@ -22,9 +22,6 @@ class MovieList {
     }
     deleteMovie(id) {
         this.movies = this.movies.filter((movie) => movie.id != id);
-    }
-    getTop10Movies() {
-        return this.movies.sort ((a, b) => b.plays - a.plays).slice(0,10);
     }
 }
 
