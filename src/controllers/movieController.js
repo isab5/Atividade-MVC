@@ -7,7 +7,7 @@ const movie1 = new Movie("Homem de ferro", "Jon Favreau", "ação", "2h 6m", 10)
 
 list.addMovie(movie1);
 
-list.addMovie(new Song("Coraline e o Mundo Secreto", "Henry Selick", "terror", "1h 40m", 7));
+list.addMovie(new Movie("Coraline e o Mundo Secreto", "Henry Selick", "terror", "1h 40m", 7));
 
 const router = {
     addMovie: (req, res) => {
@@ -61,5 +61,15 @@ const router = {
             });
         }
     },
+    deleteMovie: (req, res) => {
+        try {
+            const film = req.params.id;
+            list.deleteMovie(film);
+            res.status(200).json({ message: "Filme deletado com sucesso!", film});
+        } catch (error) {
+            res.status(404).json({ message: "erro ao deletar filmes!", error: error.message})
+        }
+    }
+
 
 }
